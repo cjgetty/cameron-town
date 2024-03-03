@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "About Cameron";
+
+const whoAmI = {
+	firstName: "Cameron",
+    email: "cameronjgetty@gmail.com",
+	city: "Brooklyn, NY",
+	occupation: "Photo Editor",
+	hobbies: ["photographer", "record collector", "bicycle rider", "coffee drinker"],
+    pets: ["Shadow", "Basil"],
+};
+
+const skills = ["HTML", "CSS", "JS/TypeScript", "and Astro"];
+
+const fontWeight = "bold";
+---
+
+<style define:vars={{fontWeight}}>
+    .skills {
+        font-weight: var(--fontWeight);
+  }
+</style>
+
+<body>
+    <BaseLayout pageTitle={pageTitle}>
+    <h2>Hey! I'm {whoAmI.firstName} ~</h2>
+  
+    <p>
+        I live in {whoAmI.city} and have two dogs named
+        <a target="_blank" href="./img/shadow.JPG">{whoAmI.pets[0]}</a> and
+        <a target="_blank" href="./img/basil.jpeg">{whoAmI.pets[1]}</a>. I'm learning web development using tools like
+        <span class="skills">{skills.join(', ')}</span> to create things for the web. On the weekends, I'm a
+        <a target="_blank" href="https://instagram.com/cameronjgetty">{whoAmI.hobbies[0]}</a>,
+        <a target="_blank" href="https://www.discogs.com/user/camerongetty/collection">{whoAmI.hobbies[1]}</a>, {whoAmI.hobbies[2]}, and {whoAmI.hobbies[3]}.
+    </p>
+    <p>
+        Feel free to reach out to talk programming, photography, music, or just to say hi at
+        <a target="_blank" href="mailto:cameronjgetty@gmail.com">{whoAmI.email}</a>.
+    </p>
+</BaseLayout>
+  </body>

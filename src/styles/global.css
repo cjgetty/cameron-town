@@ -1,0 +1,82 @@
+@import url("https://use.typekit.net/uqh5uhx.css");
+
+html {
+    background-color: rgb(250,250,250);
+    font-family: "le-monde-livre-classic-byol", serif;
+    color: rgb(20,20,20);
+  }
+  
+  body {
+    margin: 2ch auto;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2ch;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer p {
+    display: inline;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2ch;
+  }
+
+  .publish-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: solid 1px rgb(200, 200, 200);
+    border-radius: .5em;
+    padding: .5em 1em;
+    background-color: rgb(250, 250, 250);
+    transition: .15s;
+  }
+
+  .tag:hover {
+      background-color: rgb(230, 230, 230);
+      cursor: pointer;
+  }
