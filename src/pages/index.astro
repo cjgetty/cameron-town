@@ -1,9 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting';
-const pageTitle = "Home Page";
+import Social from '../components/Social.astro';
+import RecentPosts from '../components/RecentPosts.astro';
+import AboutBlurb from '../components/AboutBlurb.astro'
+const pageTitle = "Index";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-	<h2>Welcome!</h2>
+<BaseLayout>
+	<AboutBlurb></AboutBlurb>
+	
+	<div class="projects">
+		<h4>Projects</h4>
+		<RecentPosts />
+	</div>
+
+	<div class="recent-posts">
+		<h4>Blog</h4>
+		<RecentPosts />
+	</div>
 </BaseLayout>
